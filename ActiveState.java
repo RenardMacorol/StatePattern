@@ -5,14 +5,14 @@ public class ActiveState implements AccountState{
         this.account = account;
         account.setState(new ActiveState());
     }
-    public void activate(){
+    public void activate(Account account){
         System.out.println("Account is already activated");
     }
-    public void suspend(){
+    public void suspend(Account account){
         account.setState(new SuspendedState());
         System.out.println("Account is already suspended");
     }
-    public void closed(){
+    public void closed(Account account){
         System.out.println("Account is closed");
         account.setState(new ClosedState());
     }

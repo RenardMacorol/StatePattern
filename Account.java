@@ -23,13 +23,13 @@ public class Account {
     }
 
     public void activate(){
-        accountState.activate();
+        accountState.activate(this);
     }
     public void suspend(){
-        accountState.suspend();
+        accountState.suspend(this);
     }
     public void close(){
-        accountState.closed();
+        accountState.closed(this);
     }
 
     public String toString(){

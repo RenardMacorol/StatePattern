@@ -4,14 +4,14 @@ public class SuspendedState implements AccountState{
     public void setState(Account account) {
         account.setState(new SuspendedState());
     }
-    public void activate(){
+    public void activate(Account account){
         System.out.println("Account is already activated");
         account.setState(new ActiveState());
     }
-    public void suspend(){
+    public void suspend(Account account){
         System.out.println("Account is already suspended");
     }
-    public void closed(){
+    public void closed(Account account){
         System.out.println("Account is closed");
         account.setState(new ClosedState());
     }

@@ -5,13 +5,13 @@ public class ClosedState implements AccountState{
         account.setState(new ClosedState());
         this.account = account;
     }
-    public void activate(){
+    public void activate(Account account){
         System.out.println("You cannot activate a closed account");
     }
-    public void suspend(){
+    public void suspend(Account account){
         System.out.println("You cannot suspend a closed account");
     }
-    public void closed(){
+    public void closed(Account account){
         System.out.println("Account is closed");
         account.setState(new ClosedState());
     }
